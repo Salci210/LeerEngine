@@ -3179,7 +3179,7 @@ var sploosh:FlxSprite = new FlxSprite(daNote.x, playerStrums.members[daNote.note
 				if (!curStage.startsWith('school'))
 				{
 					numScore.antialiasing = true;
-					numScore.setGraphicSize(Std.int(numScore.width * 0.5));
+					numScore.setGraphicSize(Std.int(numScore.width * 1.0));
 				}
 				else
 				{
@@ -3190,15 +3190,15 @@ var sploosh:FlxSprite = new FlxSprite(daNote.x, playerStrums.members[daNote.note
 				numScore.acceleration.y = FlxG.random.int(200, 300);
 				numScore.velocity.y -= FlxG.random.int(140, 160);
 				numScore.velocity.x = FlxG.random.float(-5, 5);
-	
+	if (combo >= 1 || combo == 0)
 				add(numScore);
 	
-				FlxTween.tween(numScore, {alpha: 0}, 0.2, {
+				FlxTween.tween(numScore, {alpha: 0}, 0.1, {
 					onComplete: function(tween:FlxTween)
 					{
 						numScore.destroy();
 					},
-					startDelay: Conductor.crochet * 0.002
+					startDelay: Conductor.crochet * 0.0025
 				});
 	
 				daLoop++;
