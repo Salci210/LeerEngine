@@ -1028,10 +1028,7 @@ class PlayState extends MusicBeatState
 		versionWatermark.y = FlxG.height * 0.91 + 28;
 		songWatermark.y = FlxG.height * 0.91 + 45;
 
-		add(optionsWatermark);
-		if (FlxG.save.data.watermark)
-			add(versionWatermark);
-		add(songWatermark);
+		
 
 		scoreTxt = new FlxText(FlxG.width / 2 - 235, healthBarBG.y + 50, 0, "", 20);
 
